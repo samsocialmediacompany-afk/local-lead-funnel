@@ -42,7 +42,9 @@ function doPost(e) {
       ? body.problems.join("、")
       : String(body.problems || "");
 
-    sheet.appendRow([
+    const nextRow = sheet.getLastRow() + 1;
+    sheet.getRange(nextRow, 2, 1, 8).setNumberFormat("@");
+    sheet.getRange(nextRow, 1, 1, 9).setValues([[
       new Date(body.submittedAt || new Date()),
       safeCell_(body.storeName),
       safeCell_(body.industry),
@@ -52,7 +54,7 @@ function doPost(e) {
       safeCell_(problems),
       safeCell_(body.adBudget),
       safeCell_(body.notes)
-    ]);
+    ]]);
 
     return jsonResponse_({ ok: true });
   } catch (error) {
