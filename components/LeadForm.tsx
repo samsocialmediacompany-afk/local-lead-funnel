@@ -20,22 +20,51 @@ function buildLeadPayload(formData: FormData) {
     lineId: formData.get("lineId"),
     problems: formData.getAll("problems"),
     adBudget: formData.get("adBudget"),
-    notes: formData.get("notes")
+    notes: formData.get("notes"),
+    honeypot: formData.get("website")
   };
 }
 
 export function LeadForm({ lineUrl }: { lineUrl: string }) {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
+    if (isSubmitting) return;
 
     const form = event.currentTarget;
     const payload = buildLeadPayload(new FormData(form));
 
-    console.log("Lead diagnosis request", payload);
-    setSubmitted(true);
-    form.reset();
+    setIsSubmitting(true);
+    setSubmitted(false);
+    setError("");
+
+    try {
+      const response = await fetch("/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      const result = (await response.json().catch(() => null)) as {
+        ok?: boolean;
+        message?: string;
+      } | null;
+
+      if (!response.ok || !result?.ok) {
+        throw new Error(result?.message || "資料送出失敗");
+      }
+
+      setSubmitted(true);
+      form.reset();
+    } catch (submitError) {
+      console.error("Lead diagnosis request failed", submitError);
+      setError("資料送出失敗，請稍後再試，或直接加入官方 LINE 聯繫我們。");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -99,6 +128,20 @@ export function LeadForm({ lineUrl }: { lineUrl: string }) {
         </label>
       </div>
 
+      <div
+        aria-hidden="true"
+        className="absolute left-[-9999px] h-px w-px overflow-hidden"
+      >
+        <label htmlFor="website">Website</label>
+        <input
+          id="website"
+          name="website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
+
       <fieldset className="mt-6">
         <legend className="text-sm font-semibold text-navy-900">
           目前最大問題，可複選
@@ -149,9 +192,10 @@ export function LeadForm({ lineUrl }: { lineUrl: string }) {
 
       <button
         type="submit"
+        disabled={isSubmitting}
         className="mt-6 w-full rounded-md bg-cta-500 px-6 py-4 text-base font-bold text-navy-950 shadow-lg shadow-cta-500/25 transition hover:bg-cta-400 focus:outline-none focus:ring-4 focus:ring-cta-500/25"
       >
-        送出免費診斷需求
+        {isSubmitting ? "資料送出中" : "送出免費診斷需求"}
       </button>
 
       <p className="mt-3 text-center text-sm font-semibold leading-6 text-slate-600">
@@ -171,7 +215,16 @@ export function LeadForm({ lineUrl }: { lineUrl: string }) {
           role="status"
           className="mt-4 rounded-md bg-cta-500/10 px-4 py-3 text-sm font-semibold text-cta-600"
         >
-          已收到你的預約診斷需求，我們會盡快與你聯繫。
+          已收到您的診斷需求，我們會盡快與您聯絡
+        </p>
+      ) : null}
+
+      {error ? (
+        <p
+          role="alert"
+          className="mt-4 rounded-md bg-red-50 px-4 py-3 text-sm font-semibold text-red-700"
+        >
+          {error}
         </p>
       ) : null}
     </form>
