@@ -71,7 +71,7 @@ export async function POST(request: Request) {
       result = null;
     }
 
-    if (!response.ok || result?.ok === false) {
+    if (!response.ok || result?.ok !== true) {
       return NextResponse.json(
         { ok: false, message: result?.message || "Google Sheets 暫時無法接收資料。" },
         { status: 502 }
