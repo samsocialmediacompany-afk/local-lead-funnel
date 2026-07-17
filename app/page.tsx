@@ -6,7 +6,8 @@ const lineOfficialId = "855uphdb";
 const lineOfficialUrl = "https://lin.ee/sR8MLrmc";
 const facebookUrl =
   "https://www.facebook.com/profile.php?id=100067078134057&locale=zh_TW";
-const instagramUrl = process.env.NEXT_PUBLIC_INSTAGRAM_URL || "";
+// Keep the social entry hidden until the new brand Instagram account exists.
+const instagramUrl = "";
 const ctaLabel = "加入 LINE 免費診斷";
 
 function SocialIcon({ name }: { name: "facebook" | "instagram" | "line" | "mail" }) {
