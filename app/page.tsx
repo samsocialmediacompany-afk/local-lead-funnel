@@ -165,7 +165,7 @@ export default function Home() {
           <a
             href={lineOfficialUrl}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="whitespace-nowrap rounded-md bg-cta-500 px-3 py-3 text-sm font-bold text-navy-950 transition hover:bg-cta-400 sm:px-4"
           >
             {ctaLabel}
@@ -203,7 +203,7 @@ export default function Home() {
               <a
                 href={lineOfficialUrl}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="rounded-md bg-cta-500 px-7 py-4 text-center text-base font-black text-navy-950 shadow-lg shadow-cta-500/30 transition hover:bg-cta-400"
               >
                 {ctaLabel}
@@ -271,7 +271,7 @@ export default function Home() {
             <a
               href={lineOfficialUrl}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="mt-8 inline-flex w-full justify-center rounded-md bg-cta-500 px-6 py-4 text-base font-black text-navy-950 transition hover:bg-cta-400 sm:w-auto"
             >
               {ctaLabel}
@@ -362,7 +362,7 @@ export default function Home() {
                 <a
                   href={lineOfficialUrl}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className={`mt-7 inline-flex w-full justify-center rounded-md px-5 py-3 text-sm font-black transition ${
                     plan.featured
                       ? "bg-cta-500 text-navy-950 hover:bg-cta-400"
@@ -506,7 +506,7 @@ export default function Home() {
             <a
               href={facebookUrl}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="mt-3 block text-sm text-white/75 transition hover:text-white"
             >
               Facebook 粉專
@@ -514,7 +514,7 @@ export default function Home() {
             <a
               href={lineOfficialUrl}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="mt-4 inline-flex w-full justify-center rounded-md bg-cta-500 px-5 py-3 text-sm font-black text-navy-950 transition hover:bg-cta-400 sm:w-auto"
             >
               {ctaLabel}

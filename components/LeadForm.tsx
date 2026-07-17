@@ -203,7 +203,7 @@ export function LeadForm({ lineUrl }: { lineUrl: string }) {
         <a
           href={lineUrl}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="text-cta-600 underline decoration-cta-500/40 underline-offset-4 transition hover:text-cta-500"
         >
           加入官方 LINE
