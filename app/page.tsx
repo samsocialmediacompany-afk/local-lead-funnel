@@ -4,6 +4,8 @@ import { LeadForm } from "@/components/LeadForm";
 const contactEmail = "samsocialmediacompany@gmail.com";
 const lineOfficialId = "855uphdb";
 const lineOfficialUrl = "https://lin.ee/sR8MLrmc";
+const facebookUrl =
+  "https://www.facebook.com/profile.php?id=100067078134057&locale=zh_TW";
 const ctaLabel = "加入 LINE 免費診斷";
 
 const painPoints = [
@@ -500,6 +502,14 @@ export default function Home() {
               className="mt-3 block text-sm text-white/75 transition hover:text-white"
             >
               Email: {contactEmail}
+            </a>
+            <a
+              href={facebookUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-3 block text-sm text-white/75 transition hover:text-white"
+            >
+              Facebook 粉專
             </a>
             <a
               href={lineOfficialUrl}
