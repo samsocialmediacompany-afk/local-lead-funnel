@@ -1,0 +1,15 @@
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+    <rect width="1080" height="1920" fill="#F8FAFC"/>
+    <rect width="1080" height="470" fill="#0F2747"/>
+    <circle cx="960" cy="80" r="240" fill="#2563EB" opacity="0.18"/>
+    <text x="70" y="104" text-anchor="start" fill="#22C55E" font-family="Noto Sans TC, Inter, Arial, sans-serif" font-size="42px" font-weight="900">LLF</text>
+    <text x="1010" y="104" text-anchor="end" fill="#FFFFFF" font-family="Noto Sans TC, Inter, Arial, sans-serif" font-size="28px" font-weight="700">流程</text>
+    <text x="70" y="250" text-anchor="start" fill="#FFFFFF" font-family="Noto Sans TC, Inter, Arial, sans-serif" font-size="58px" font-weight="900">串接後持續優化</text>
+    <rect x="70" y="560" width="940" height="850" rx="28" fill="#FFFFFF" stroke="#CBD5E1" stroke-opacity="0.5"/>
+    <text x="125" y="720" text-anchor="start" fill="#22C55E" font-family="Noto Sans TC, Inter, Arial, sans-serif" font-size="24px" font-weight="900">01</text><text x="205" y="720" text-anchor="start" fill="#0F172A" font-family="Noto Sans TC, Inter, Arial, sans-serif" font-size="34px" font-weight="800">LINE 與表單串接</text><text x="125" y="860" text-anchor="start" fill="#22C55E" font-family="Noto Sans TC, Inter, Arial, sans-serif" font-size="24px" font-weight="900">02</text><text x="205" y="860" text-anchor="start" fill="#0F172A" font-family="Noto Sans TC, Inter, Arial, sans-serif" font-size="34px" font-weight="800">上線測試</text><text x="125" y="1000" text-anchor="start" fill="#22C55E" font-family="Noto Sans TC, Inter, Arial, sans-serif" font-size="24px" font-weight="900">03</text><text x="205" y="1000" text-anchor="start" fill="#0F172A" font-family="Noto Sans TC, Inter, Arial, sans-serif" font-size="34px" font-weight="800">後續每週優化</text>
+    <path d="M125 1560h830" stroke="#0F2747" stroke-opacity="0.15" stroke-width="3"/>
+    <text x="70" y="1690" text-anchor="start" fill="#0F2747" font-family="Noto Sans TC, Inter, Arial, sans-serif" font-size="42px" font-weight="900">申請免費診斷</text>
+    <text x="70" y="1760" text-anchor="start" fill="#2563EB" font-family="Noto Sans TC, Inter, Arial, sans-serif" font-size="28px" font-weight="700">local-lead-funnel.vercel.app</text>
+    <text x="1010" y="1840" text-anchor="end" fill="#0F2747" font-family="Noto Sans TC, Inter, Arial, sans-serif" font-size="24px" font-weight="700">Story 4</text>
+  </svg>

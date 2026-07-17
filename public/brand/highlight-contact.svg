@@ -1,0 +1,10 @@
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+    <rect width="1080" height="1920" fill="#0F2747"/>
+    <circle cx="540" cy="840" r="310" fill="#2563EB" opacity="0.18"/>
+    <circle cx="540" cy="840" r="250" fill="none" stroke="#22C55E" stroke-width="8"/>
+    <text x="540" y="900" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="170px" font-weight="900">@</text>
+    <text x="540" y="1180" text-anchor="middle" fill="#22C55E" font-family="Noto Sans TC, Inter, Arial, sans-serif" font-size="46px" font-weight="900">LLF</text>
+    <text x="540" y="1270" text-anchor="middle" fill="#FFFFFF" font-family="Noto Sans TC, Inter, Arial, sans-serif" font-size="54px" font-weight="900">聯絡</text>
+    <text x="540" y="1770" text-anchor="middle" fill="#CBD5E1" font-family="Noto Sans TC, Inter, Arial, sans-serif" font-size="28px" font-weight="600">Local Lead Funnel｜預約成交系統</text>
+  </svg>

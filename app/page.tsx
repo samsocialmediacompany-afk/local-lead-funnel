@@ -6,7 +6,39 @@ const lineOfficialId = "855uphdb";
 const lineOfficialUrl = "https://lin.ee/sR8MLrmc";
 const facebookUrl =
   "https://www.facebook.com/profile.php?id=100067078134057&locale=zh_TW";
+const instagramUrl = process.env.NEXT_PUBLIC_INSTAGRAM_URL || "";
 const ctaLabel = "加入 LINE 免費診斷";
+
+function SocialIcon({ name }: { name: "facebook" | "instagram" | "line" | "mail" }) {
+  if (name === "mail") {
+    return (
+      <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5 fill-none stroke-current stroke-2">
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <path d="m4 7 8 6 8-6" />
+      </svg>
+    );
+  }
+
+  if (name === "line") {
+    return <span aria-hidden="true" className="text-sm font-black leading-none">LINE</span>;
+  }
+
+  if (name === "instagram") {
+    return (
+      <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5 fill-none stroke-current stroke-2">
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.5" cy="6.5" r="1" className="fill-current stroke-0" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5 fill-current">
+      <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.7-1.6h1.8V3.8c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2V10H8v3h2.5v8h3Z" />
+    </svg>
+  );
+}
 
 const painPoints = [
   "廣告有花錢，但預約名單很少",
@@ -146,7 +178,7 @@ export default function Home() {
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/15 bg-navy-950/80 text-white backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
           <a href="#top" className="text-sm font-black sm:text-base">
-            Local Funnel Lab
+            Local Lead Funnel
           </a>
           <nav className="hidden items-center gap-6 text-sm font-semibold text-white/80 md:flex">
             <a href="#solutions" className="transition hover:text-white">
@@ -490,26 +522,58 @@ export default function Home() {
       <footer className="bg-navy-950 px-4 py-10 text-white sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
           <div>
-            <p className="text-xl font-black">Local Funnel Lab</p>
+            <p className="text-xl font-black">Local Lead Funnel｜預約成交系統</p>
             <p className="mt-3 max-w-md text-sm leading-7 text-white/70">
               幫本地服務型店家建立一頁式成交網站、預約表單、LINE 導流與名單追蹤流程。
             </p>
           </div>
           <div>
             <p className="text-sm font-black text-cta-400">聯絡方式</p>
+            <div className="mt-3 flex flex-wrap gap-3">
+              <a
+                href={`mailto:${contactEmail}`}
+                aria-label={`寄信給 ${contactEmail}`}
+                className="inline-flex min-h-11 items-center gap-2 rounded-md border border-white/15 px-3 text-sm text-white/80 transition hover:border-white/35 hover:text-white"
+              >
+                <SocialIcon name="mail" />
+                Email
+              </a>
+              <a
+                href={facebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="開啟 Facebook 粉專"
+                className="inline-flex min-h-11 items-center gap-2 rounded-md border border-white/15 px-3 text-sm text-white/80 transition hover:border-white/35 hover:text-white"
+              >
+                <SocialIcon name="facebook" />
+                Facebook
+              </a>
+              {instagramUrl ? (
+                <a
+                  href={instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="開啟 Instagram"
+                  className="inline-flex min-h-11 items-center gap-2 rounded-md border border-white/15 px-3 text-sm text-white/80 transition hover:border-white/35 hover:text-white"
+                >
+                  <SocialIcon name="instagram" />
+                  Instagram
+                </a>
+              ) : (
+                <span
+                  aria-label="Instagram 品牌帳號尚待建立"
+                  className="inline-flex min-h-11 items-center gap-2 rounded-md border border-white/10 px-3 text-sm text-white/45"
+                >
+                  <SocialIcon name="instagram" />
+                  Instagram（待建立）
+                </span>
+              )}
+            </div>
             <a
               href={`mailto:${contactEmail}`}
-              className="mt-3 block text-sm text-white/75 transition hover:text-white"
+              className="mt-3 block break-all text-sm text-white/60 transition hover:text-white"
             >
-              Email: {contactEmail}
-            </a>
-            <a
-              href={facebookUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 block text-sm text-white/75 transition hover:text-white"
-            >
-              Facebook 粉專
+              {contactEmail}
             </a>
             <a
               href={lineOfficialUrl}

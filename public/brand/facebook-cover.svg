@@ -1,0 +1,21 @@
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="1640" height="624" viewBox="0 0 1640 624">
+    <rect width="1640" height="624" fill="#0F2747"/>
+    <circle cx="1430" cy="30" r="380" fill="#2563EB" opacity="0.18"/>
+    <circle cx="1530" cy="520" r="260" fill="#22C55E" opacity="0.12"/>
+    <path d="M0 535h1640" stroke="#FFFFFF" stroke-opacity="0.1"/>
+    <text x="150" y="112" text-anchor="start" fill="#22C55E" font-family="Noto Sans TC, Inter, Arial, sans-serif" font-size="34px" font-weight="800">Local Lead Funnel｜預約成交系統</text>
+    <text x="150" y="250" text-anchor="start" fill="#FFFFFF" font-family="Noto Sans TC, Inter, Arial, sans-serif" font-size="64px" font-weight="900">幫本地店家把流量變成預約</text>
+    <text x="155" y="325" text-anchor="start" fill="#CBD5E1" font-family="Noto Sans TC, Inter, Arial, sans-serif" font-size="30px" font-weight="600">一頁式網站 × LINE 導流 × 表單追蹤</text>
+    <rect x="150" y="392" width="330" height="70" rx="14" fill="#22C55E"/>
+    <text x="315" y="438" text-anchor="middle" fill="#0F2747" font-family="Noto Sans TC, Inter, Arial, sans-serif" font-size="24px" font-weight="900">免費診斷你的預約流程</text>
+    <text x="150" y="560" text-anchor="start" fill="#FFFFFF" font-family="Noto Sans TC, Inter, Arial, sans-serif" font-size="22px" font-weight="600">local-lead-funnel.vercel.app</text>
+    <g transform="translate(1120 135)">
+      <rect width="360" height="300" rx="30" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.18"/>
+      <path d="M70 70h220l-68 76v64l-42 26v-90z" fill="#FFFFFF"/>
+      <path d="m254 45 70-42-30 83-26-20-60 73-29-24 60-73-25-20z" fill="#22C55E"/>
+      <text x="110" y="270" text-anchor="start" fill="#CBD5E1" font-family="Noto Sans TC, Inter, Arial, sans-serif" font-size="20px" font-weight="700">流量</text>
+      <text x="180" y="270" text-anchor="start" fill="#CBD5E1" font-family="Noto Sans TC, Inter, Arial, sans-serif" font-size="20px" font-weight="700">名單</text>
+      <text x="252" y="270" text-anchor="start" fill="#22C55E" font-family="Noto Sans TC, Inter, Arial, sans-serif" font-size="20px" font-weight="800">預約</text>
+    </g>
+  </svg>
