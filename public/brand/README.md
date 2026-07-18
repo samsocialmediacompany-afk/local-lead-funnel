@@ -22,4 +22,4 @@ The source generator is `scripts/generate-brand-assets.mjs`. Run it with the rep
 - `highlight-*.svg` and `.png`: five highlight covers
 - `stories/story-*.svg` and `.png`: two story cards for each highlight category
 
-The website uses `social-og.png` for Open Graph and Twitter previews. Instagram is intentionally not linked until the correct brand account is created and confirmed.
+The website uses `social-og.png` for Open Graph and Twitter previews, and the footer links to the confirmed brand Instagram account.

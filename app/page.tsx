@@ -6,7 +6,7 @@ const lineOfficialId = "855uphdb";
 const lineOfficialUrl = "https://lin.ee/sR8MLrmc";
 const facebookUrl =
   "https://www.facebook.com/profile.php?id=100067078134057&locale=zh_TW";
-const instagramUrl = "https://www.instagram.com/localleadfunnel/";
+const instagramUrl = "https://www.instagram.com/shengwenzheng74/";
 const ctaLabel = "加入 LINE 免費診斷";
 
 function SocialIcon({ name }: { name: "facebook" | "instagram" | "line" | "mail" }) {
